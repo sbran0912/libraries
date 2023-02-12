@@ -229,8 +229,8 @@ export function range(len) {
   return arr;
 }
 /** make shuffled copy of arr
- * @param {number[]|string[]} arr 
- * @returns {number[]|string[]}
+ * @param {number[]} arr 
+ * @returns {number[]}
  */
 export function shuffle(arr) {
   let a = arr.slice();
@@ -239,4 +239,20 @@ export function shuffle(arr) {
     [a[i - 1], a[j]] = [a[j], a[i - 1]];
   }
   return a;
+}
+
+/** Fetching a CSV-File from Server
+ * @param {string} file 
+ */
+export async function fetchCSV(file) {
+	const response = await fetch(file);
+	const data = await response.text();
+	const rows = data.split('\n');
+	let cols = new Array(rows.length);
+
+	rows.forEach((row, i) => {
+    cols[i] = row.split(',');
+
+	});
+	return cols;
 }
