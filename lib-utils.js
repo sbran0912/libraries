@@ -1,4 +1,4 @@
-// Version: 1.0 Stand Februar 2023
+// Version: 1.1 Stand Februar 2023
 
 /** Interface Perlin
  * @typedef {Object} Perlin
@@ -218,13 +218,14 @@ export function limitNum(number, limit) {
   return numberMag * vorzeichen;
 }
 /** array autofill 0 to len-1
+ * @param {number} start 
  * @param {number} len length of array
  * @returns {number[]}
  */
-export function range(len) {
+export function range(start, len) {
   let arr = new Array(len);
   for (let i = 0; i < len; i++) {
-    arr[i] = i;
+    arr[i] = i + start;
   }
   return arr;
 }
