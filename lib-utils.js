@@ -1,4 +1,4 @@
-// Version: 1.2 Stand Februar 2023
+// Version: 1.2 Stand 26. Februar 2023
 
 /** randomgenerator between n1 and n2
  * @param {number} n1 
