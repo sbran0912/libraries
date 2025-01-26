@@ -4,9 +4,9 @@
 const canv = document.querySelector("canvas");
 const output = document.querySelector("#output");
 const ctx = canv.getContext("2d");
-export const color_r = 50
-export const color_g = 206
-export const color_b = 209
+export const color_r = 51
+export const color_g = 140
+export const color_b = 255
 export let mouseX = 0;
 export let mouseY = 0;
 let mouseStatus = 0;
@@ -220,9 +220,9 @@ export function background(...color) {
     g = color[0];
     b = color[0];
   } else {
-    r = color[0] || color_r;
-    g = color[1] || color_r;
-    b = color[2] || color_r;
+    r = color[0] || 255;
+    g = color[1] || 255;
+    b = color[2] || 255;
   }
 
   push();

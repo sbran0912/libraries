@@ -176,7 +176,7 @@ export class Wall extends Box{
   
     display() {
         lb2d.push();
-        lb2d.strokeColor(255);
+        lb2d.strokeColor(0);
         super.display();
         lb2d.pop();
     }
